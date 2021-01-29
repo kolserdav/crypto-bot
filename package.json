@@ -1,0 +1,27 @@
+{
+  "name": "crypto-bot",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon ${npm_package_main}",
+    "start": "node ${npm_package_main}",
+    "ts": "tsc -p . -w",
+    "ts:build": "tsc -p .",
+    "prod": "echo logfile ${pwd}/logs/cb-${npm_package_version}.log > ~/.screenrc && screen -dmS cb -L yarn start",
+    "deploy": "yarn ts:build && yarn prod",
+    "logs": "cat ${pwd}/logs/cb-${npm_package_version}.log",
+    "get": "screen -x you"
+
+  },
+  "dependencies": {
+    "@types/dotenv": "^8.2.0",
+    "dotenv": "^8.2.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "telegraf": "^4.0.2"
+  },
+  "devDependencies": {
+    "@types/request-promise": "^4.1.47"
+  }
+}
