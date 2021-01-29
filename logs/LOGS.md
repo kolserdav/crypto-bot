@@ -1,0 +1,1 @@
+To get logs run `yarn logs`

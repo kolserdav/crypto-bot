@@ -8,10 +8,10 @@
     "start": "node ${npm_package_main}",
     "ts": "tsc -p . -w",
     "ts:build": "tsc -p .",
-    "prod": "echo logfile ${pwd}/logs/cb-${npm_package_version}.log > ~/.screenrc && screen -dmS cb -L yarn start",
+    "prod": "echo logfile $(pwd)/logs/cb-${npm_package_version}.log > ~/.screenrc && screen -dmS cb -L yarn start",
     "deploy": "yarn ts:build && yarn prod",
-    "logs": "cat ${pwd}/logs/cb-${npm_package_version}.log",
-    "get": "screen -x you"
+    "logs": "cat $(pwd)/logs/cb-${npm_package_version}.log",
+    "get": "screen -x cb"
 
   },
   "dependencies": {
